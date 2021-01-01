@@ -23,6 +23,6 @@
       "@fonts/*": ["src/assets/fonts/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "src/types/twin.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }
