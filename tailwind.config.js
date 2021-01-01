@@ -10,7 +10,7 @@ const base = {
     defaultLocale: "en-US",
   },
   purge: {
-    content: ["./pages/**/*.tsx", "./components/**/*.tsx"],
+    content: ["./src/pages/**/*.tsx", "./src/components/**/*.tsx"],
     // These options are passed through directly to PurgeCSS
   },
   theme: {
