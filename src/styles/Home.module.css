@@ -40,9 +40,20 @@
   text-decoration: none;
 }
 
+.subtitle a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
 .title a:hover,
 .title a:focus,
 .title a:active {
+  text-decoration: underline;
+}
+
+.subtitle a:hover,
+.subtitle a:focus,
+.subtitle a:active {
   text-decoration: underline;
 }
 
@@ -52,7 +63,15 @@
   font-size: 4rem;
 }
 
+.subtitle {
+  margin: 1rem;
+  line-height: 1;
+  font-size: 2rem;
+  font-style: italic;
+}
+
 .title,
+.subtitle,
 .description {
   text-align: center;
 }
