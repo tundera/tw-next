@@ -11,7 +11,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js with TailwindCSS</a>
+          <a href="https://nextjs.org">Next.js</a> with TailwindCSS
         </h1>
 
         <p className={styles.description}>
