@@ -1,5 +1,6 @@
 import Head from "next/head";
 import styles from "@styles/Home.module.css";
+import ResourceLinks from "@components/ResourceLinks";
 
 export default function Home() {
   return (
@@ -19,41 +20,7 @@ export default function Home() {
           <code className={styles.code}>pages/index.js</code>
         </p>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://tailwindcss.com/docs" className={styles.card}>
-            <h3>TailwindCSS &rarr;</h3>
-            <p>
-              Learn about TailwindCSS by exploring the official documentation!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Template &rarr;</h3>
-            <p>
-              Pick up where this example leaves off to jumpstart your own
-              Next.js + TailwindCSS app
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Blog Post &rarr;</h3>
-            <p>
-              Want to know how to build this template yourself? Check out the
-              blog post <a href="#">here</a>.
-            </p>
-          </a>
-        </div>
+        <ResourceLinks />
       </main>
 
       <footer className={styles.footer}>
