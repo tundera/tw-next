@@ -37,7 +37,3 @@ const base = {
     purgeLayersByDefault: true,
   },
 };
-
-const config = {};
-
-module.exports = merge(base, config);

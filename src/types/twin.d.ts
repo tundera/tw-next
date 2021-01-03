@@ -13,7 +13,7 @@ declare module "twin.macro" {
 }
 
 // The 'as' prop on styled components
-declare global {
+declare module "react" {
   namespace JSX {
     interface IntrinsicAttributes<T> extends DOMAttributes<T> {
       as?: string;
