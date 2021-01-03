@@ -1,9 +1,15 @@
 import styles from "@styles/Home.module.css";
 import type { FC } from "react";
+import { css } from "twin.macro";
 
 const ResourceLinks: FC = () => {
   return (
-    <div className={styles.grid}>
+    <div
+      css={css`
+        border: 5px dashed slateblue;
+      `}
+      className={styles.grid}
+    >
       <a href="https://nextjs.org/docs" className={styles.card}>
         <h3>Documentation &rarr;</h3>
         <p>Find in-depth information about Next.js features and API.</p>
