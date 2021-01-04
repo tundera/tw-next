@@ -1,9 +1,9 @@
 import type { FC } from "react";
 import { useTheme } from "next-themes";
 
-interface Props {
+type Props = {
   disabled: boolean;
-}
+};
 
 const DarkModeSwitch: FC<Props> = ({ disabled }) => {
   const { theme, setTheme } = useTheme();

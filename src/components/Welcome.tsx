@@ -1,8 +1,8 @@
 import type { FC } from "react";
 
-interface Props {
+type Props = {
   title: string;
-}
+};
 
 const Welcome: FC<Props> = ({ title }) => {
   return (

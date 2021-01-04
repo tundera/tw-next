@@ -1,4 +1,6 @@
-import { useState, FC } from "react";
+import type { FC } from "react";
+
+import { useState } from "react";
 import NextLink from "next/link";
 
 const Header: FC = () => {

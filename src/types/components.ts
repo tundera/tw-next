@@ -1,14 +1,14 @@
-export interface HeaderLink {
+export type HeaderLink = {
   label: string;
   link?: string;
   isSelected?: boolean;
   desc?: string;
   icon?: JSX.Element;
-}
+};
 
-export interface DDMItem {
+export type DDMItem = {
   icon?: JSX.Element;
   label: string;
   desc?: string;
   link?: string;
-}
+};

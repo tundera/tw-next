@@ -1,4 +1,5 @@
 import type { DDMItem, HeaderLink } from "types/components";
+import type { FC } from "react";
 
 import { useState, useEffect } from "react";
 import NextLink from "next/link";
@@ -7,7 +8,7 @@ import FormSubscribe from "@components/FormSubscribe";
 import DropDownMenu from "@components/DropDownMenu";
 import DarkModeSwitch from "@components/DarkModeSwitch";
 
-interface Props {
+type Props = {
   forceMenuOpenInMobile?: boolean;
   forceDDMOpenInMobile?: boolean;
   links: HeaderLink[];
@@ -19,13 +20,13 @@ interface Props {
   withSearchBar?: boolean;
   isFat?: boolean;
   withRequestLink?: boolean;
-}
+};
 
-const Header = (props: Props) => {
-  const [mounted, setMounted] = useState(false);
+const Header: FC<Props> = (props) => {
+  const [isMounted, setIsMounted] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => setIsMounted(true), []);
 
   return (
     <div className="sticky-header">
@@ -41,7 +42,7 @@ const Header = (props: Props) => {
                 props.alignRight ? "w-full justify-between" : ""
               } flex items-center`}
             >
-              <DarkModeSwitch disabled={!mounted} />
+              <DarkModeSwitch disabled={!isMounted} />
               <a className="flex-shrink-0" href="/">
                 <img
                   className="h-8 w-8"

@@ -1,6 +1,6 @@
 import type { FC } from "react";
 
-interface Props {
+type Props = {
   type?: string;
   label?: string;
   required?: boolean;
@@ -12,7 +12,7 @@ interface Props {
   disabled?: boolean;
   square?: boolean;
   withForceIndications?: boolean;
-}
+};
 
 const InputText: FC<Props> = (props: Props) => {
   return (

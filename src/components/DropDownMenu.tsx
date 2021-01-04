@@ -1,7 +1,9 @@
 import type { DDMItem } from "types/components";
+import type { FC } from "react";
 
 import { useState } from "react";
-interface Props {
+
+type Props = {
   //boolean to always open ddm (for presentation)
   forceOpen?: boolean;
   label?: string;
@@ -9,9 +11,9 @@ interface Props {
   icon?: JSX.Element;
   items: DDMItem[];
   withBackground?: boolean;
-}
+};
 
-const DropDownMenu = (props: Props) => {
+const DropDownMenu: FC<Props> = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="relative inline-block text-left">

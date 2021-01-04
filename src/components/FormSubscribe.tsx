@@ -1,10 +1,10 @@
 import type { FC } from "react";
 import InputText from "./InputText";
 
-interface Props {
+type Props = {
   label: string;
   placeholder: string;
-}
+};
 
 const FormSubscribe: FC<Props> = ({ label, placeholder }) => {
   return (
