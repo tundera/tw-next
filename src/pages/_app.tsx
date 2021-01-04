@@ -47,7 +47,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <div>
       <GlobalStyles />
       <div className="bg-white dark:bg-black">
-        <Header links={links} ddmItems={ddmItems} />
+        <Header links={links} ddmItems={ddmItems} withShadow={true} />
         <Component {...pageProps} />
       </div>
     </div>

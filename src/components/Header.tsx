@@ -39,9 +39,9 @@ const Header = (props: Props) => {
   useEffect(() => setMounted(true), []);
 
   return (
-    <div>
+    <div className="sticky-header">
       <nav
-        className={`bg-white dark:bg-gray-800 ${
+        className={`bg-opacity-90 bg-purple-300 dark:bg-gray-800 ${
           props.withShadow ? " shadow" : ""
         }${props.isFat ? " py-4" : ""} `}
       >
