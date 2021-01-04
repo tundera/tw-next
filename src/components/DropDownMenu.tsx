@@ -1,5 +1,6 @@
-import { useState } from "react";
+import type { DDMItem } from "types/components";
 
+import { useState } from "react";
 interface Props {
   //boolean to always open ddm (for presentation)
   forceOpen?: boolean;
@@ -8,13 +9,6 @@ interface Props {
   icon?: JSX.Element;
   items: DDMItem[];
   withBackground?: boolean;
-}
-
-export interface DDMItem {
-  icon?: JSX.Element;
-  label: string;
-  desc?: string;
-  link?: string;
 }
 
 const DropDownMenu = (props: Props) => {

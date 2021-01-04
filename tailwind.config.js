@@ -18,7 +18,7 @@ const base = {
     extend: {
       backgroundImage: (theme) => ({
         check: "url('/icons/check.svg')",
-        landscape: "url('/images/landscape/2.jpg')",
+        landscape: "url('/static/images/landscape/2.jpg')",
       }),
     },
   },

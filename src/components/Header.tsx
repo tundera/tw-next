@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from "react";
+import type { DDMItem, HeaderLink } from "types/components";
+
+import { useState, useEffect } from "react";
 import NextLink from "next/link";
 
-import FormSubscribe from "./FormSubscribe";
-import DropDownMenu from "./DropDownMenu";
-import DarkModeSwitch from "./DarkModeSwitch";
+import FormSubscribe from "@components/FormSubscribe";
+import DropDownMenu from "@components/DropDownMenu";
+import DarkModeSwitch from "@components/DarkModeSwitch";
 
 interface Props {
   forceMenuOpenInMobile?: boolean;
@@ -18,19 +20,6 @@ interface Props {
   isFat?: boolean;
   withRequestLink?: boolean;
 }
-interface HeaderLink {
-  label: string;
-  link?: string;
-  isSelected?: boolean;
-  desc?: string;
-  icon?: JSX.Element;
-}
-interface DDMItem {
-  icon?: JSX.Element;
-  label: string;
-  desc?: string;
-  link?: string;
-}
 
 const Header = (props: Props) => {
   const [mounted, setMounted] = useState(false);
@@ -41,7 +30,7 @@ const Header = (props: Props) => {
   return (
     <div className="sticky-header">
       <nav
-        className={`bg-opacity-90 bg-white dark:bg-gray-800 ${
+        className={`bg-white dark:bg-black ${
           props.withShadow ? " shadow" : ""
         }${props.isFat ? " py-4" : ""} `}
       >

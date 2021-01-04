@@ -1,7 +1,11 @@
 import type { AppProps /*, AppContext */ } from "next/app";
 import { GlobalStyles } from "twin.macro";
+import { ThemeProvider } from "next-themes";
+import { DefaultSeo } from "next-seo";
+import Head from "next/head";
 
 import Header from "@components/Header";
+import SEO from "../../next-seo.config";
 import "@styles/globals.css";
 
 const links = [
@@ -44,13 +48,22 @@ const ddmItems = [
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div>
+    <ThemeProvider attribute="class">
+      <Head>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+      </Head>
       <GlobalStyles />
-      <div className="bg-white dark:bg-black">
-        <Header links={links} ddmItems={ddmItems} withShadow={true} />
+      <DefaultSeo {...SEO} />
+      <div className="bg-white dark:bg-gray-800">
+        <Header
+          links={links}
+          ddmItems={ddmItems}
+          withShadow={true}
+          hideHelp={true}
+        />
         <Component {...pageProps} />
       </div>
-    </div>
+    </ThemeProvider>
   );
 }
 
