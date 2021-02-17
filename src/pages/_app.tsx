@@ -8,6 +8,8 @@ import Header from "@components/Header";
 import SEO from "../../next-seo.config";
 import "@styles/globals.css";
 
+import "twin.macro";
+
 const links = [
   {
     label: "Home",
@@ -48,22 +50,24 @@ const ddmItems = [
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider attribute="class">
+    <>
       <Head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
       <GlobalStyles />
       <DefaultSeo {...SEO} />
-      <div className="bg-white dark:bg-gray-800">
-        <Header
-          links={links}
-          ddmItems={ddmItems}
-          withShadow={true}
-          hideHelp={true}
-        />
-        <Component {...pageProps} />
-      </div>
-    </ThemeProvider>
+      <ThemeProvider attribute="class">
+        <div tw="bg-white dark:bg-gray-800">
+          <Header
+            links={links}
+            ddmItems={ddmItems}
+            withShadow={true}
+            hideHelp={true}
+          />
+          <Component {...pageProps} />
+        </div>
+      </ThemeProvider>
+    </>
   );
 }
 
